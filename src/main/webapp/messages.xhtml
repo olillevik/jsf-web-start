@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:jsf="http://xmlns.jcp.org/jsf">
+<head jsf:id="head">
+<title>JSF Web Start</title>
+</head>
+<body jsf:id="body">
+
+	<h1>Message board</h1>
+	<p>The content is not moderated. This is just a test ground. No messages will be persisted forever.</p>
+
+
+
+	<h:dataTable id="messageDataTable" value="#{messageBoard.messages}" var="message">
+		<h:column>
+			<h:outputText value="#{message.text}" />
+		</h:column>
+	</h:dataTable>
+
+	<h:form>
+		<h:inputText id="messageText" value="#{message.text}"></h:inputText>
+		<h:commandButton action="#{messageBoard.addMessage(message)}" value="Send">
+		</h:commandButton>
+	</h:form>
+
+</body>
+</html>
