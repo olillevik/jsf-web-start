@@ -26,6 +26,7 @@ target/*
 *.log
 *.sql
 *.sqlite
+.settings
 
 # OS generated files #
 ######################
